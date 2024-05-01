@@ -11,8 +11,10 @@ for dirpath, dirnames, filenames in os.walk(path):    # обход катало�
     print(file_sise)
 
     for file in filenames:
-        full_name_path = dirpath +'\\' + file
         full_name_path = os.path.join(dirpath, file)
         full_name_path = os.path.getsize(dirpath)
-        print(full_name_path, os.path.getmtime(full_name_path))    #отображение времени последнего изменения фапйла
+        full_name_path = dirpath + '\\' + file
+        print(os.path.getmtime(full_name_path))    #отображение времени последнего изменения фапйла
+
+
 
